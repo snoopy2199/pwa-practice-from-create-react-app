@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
 
+const fateList = [
+  '大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶',
+];
+
 const HelloWorld = () => {
   const [isCopyBoxShowing, setIsCopyBoxShowing] = useState(false);
+  const [fate, setFate] = useState('');
+
+  const chance = () => {
+    setIsCopyBoxShowing(false);
+    setFate(fateList[Math.floor(Math.random() * fateList.length)]);
+  };
 
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        text: 'Hello World!',
+        text: `我在「PWA (React)」(https://snoopy2199.github.io/pwa-practice-from-create-react-app/)抽到了「${fate}」`,
       });
     } else {
       setIsCopyBoxShowing(true);
     }
-  }
+  };
 
   return (
     <div className="hello">
-      <button onClick={handleShare}>share</button>
-      {isCopyBoxShowing && <input type="text" defaultValue="Hello World!" />}
+      {fate}
+      <button onClick={chance}>抽籤</button>
+      {fate && <button onClick={handleShare}>分享</button>}
+      {isCopyBoxShowing && (
+        <textarea
+          defaultValue={`我在「PWA (React)」(https://snoopy2199.github.io/pwa-practice-from-create-react-app/)抽到了「${fate}」`}
+        />
+      )}
     </div>
   );
 }
