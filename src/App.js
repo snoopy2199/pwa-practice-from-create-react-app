@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
+import HelloWorld from './components/HelloWorld';
 import './App.css';
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         </a>
       </header>
       {promptEvent && <button onClick={handlePromotion}>install</button>}
+      <HelloWorld />
     </div>
   );
 }
