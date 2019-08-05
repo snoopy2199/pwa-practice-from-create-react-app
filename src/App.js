@@ -27,7 +27,10 @@ const App = () => {
 
   return (
     <div className="App">
-      {promptEvent && <button onClick={handlePromotion}>install</button>}
+      <div className="header">
+        PWA (React)
+        {promptEvent && <button onClick={handlePromotion}>install</button>}
+      </div>
       <HelloWorld />
     </div>
   );
