@@ -7,7 +7,7 @@ const HelloWorld = () => {
     if (navigator.share) {
       navigator.share({
         text: 'Hello World!',
-      })
+      });
     } else {
       setIsCopyBoxShowing(true);
     }
