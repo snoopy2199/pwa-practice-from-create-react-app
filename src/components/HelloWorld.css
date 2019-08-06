@@ -1,0 +1,28 @@
+.hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hello button {
+  background-color: #FFAB73;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.fate {
+  font-size: 80px;
+  margin: 20px;
+  height: 100px;
+}
+
+.share-text {
+  width: 60%;
+  border-radius: 5px;
+  border: solid #bbbbbb 1px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  margin-top: 20px;
+  outline: none;
+}

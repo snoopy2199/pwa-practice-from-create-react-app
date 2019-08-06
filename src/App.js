@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <div className="header">
         PWA (React)
-        {promptEvent && <button onClick={handlePromotion}>install</button>}
+        {promptEvent && <button onClick={handlePromotion}>安裝</button>}
       </div>
       <HelloWorld />
     </div>

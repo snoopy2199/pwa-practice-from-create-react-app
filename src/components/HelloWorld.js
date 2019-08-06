@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './HelloWorld.css';
 
 const fateList = [
   '大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶',
@@ -25,11 +26,14 @@ const HelloWorld = () => {
 
   return (
     <div className="hello">
-      {fate}
-      <button onClick={chance}>抽籤</button>
-      {fate && <button onClick={handleShare}>分享</button>}
+      <div className="fate">{fate}</div>
+      <div>
+        <button onClick={chance}>抽籤</button>
+        {fate && <button onClick={handleShare}>分享</button>}
+      </div>
       {isCopyBoxShowing && (
         <textarea
+          className="share-text"
           defaultValue={`我在「PWA (React)」(https://snoopy2199.github.io/pwa-practice-from-create-react-app/)抽到了「${fate}」`}
         />
       )}

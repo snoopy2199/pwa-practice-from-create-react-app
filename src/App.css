@@ -1,3 +1,27 @@
 .App {
   text-align: center;
 }
+
+.header {
+  background-color: #FFAB73;
+  color: #3C3C3C;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  position: relative;
+}
+
+button {
+  width: 70px;
+  border-radius: 5px;
+  padding: 3px;
+  border: none;
+  outline: none;
+}
+
+.header button {
+  background-color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+}
